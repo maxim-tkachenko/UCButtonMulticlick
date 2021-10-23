@@ -38,7 +38,8 @@
             "includePath": [
                 "/Users/mtkachenko/Library/Arduino15/packages/arduino/hardware/avr/1.8.3/cores/arduino",
                 "/Users/mtkachenko/Library/Arduino15/packages/arduino/hardware/avr/1.8.3/variants/eightanaloginputs",
-                "/Users/mtkachenko/Projects/local/iot/libraries/FastLED",
+                "/Users/mtkachenko/Projects/local/iot/libraries/UnitConfiguration",
+                "/Users/mtkachenko/Projects/local/iot/libraries/OneButton",
                 "/Users/mtkachenko/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/lib/gcc/avr/7.3.0/include",
                 "/Users/mtkachenko/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/lib/gcc/avr/7.3.0/include-fixed",
                 "/Users/mtkachenko/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/avr/include"
