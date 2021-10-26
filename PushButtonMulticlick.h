@@ -18,13 +18,13 @@ public:
 	virtual StateChangedResult stateIsChanged() override;
 	void tick() override;
 
-	// events
-	void clickEvent();
-	void pressEvent();
-	void longPressStartEvent();
-	void longPressStopEvent();
-	void duringLongPressEvent();
-	void doubleClickEvent();
+	// event handlers
+	void onClick();
+	void onDoubleClick();
+	void onMultiClick();
+	void onLongPressStart();
+	void onLongPressStop();
+	void onDuringLongPress();
 };
 
 // enum
@@ -33,38 +33,45 @@ public:
 // } PushButtonMulticlickResult;
 
 // Handler wrapper function for a single click:
-static void __handleClick(void *s)
+static void __onPushButtonMulticlickClicked(void *s)
 {
 	traceme;
-	((PushButtonMulticlick *)s)->clickEvent();
+	((PushButtonMulticlick *)s)->onClick();
 }
 
 // Handler wrapper function for a double click:
-static void __handleDoubleClick(void *s)
+static void __onPushButtonMulticlickDoubleClicked(void *s)
 {
 	traceme;
-	((PushButtonMulticlick *)s)->doubleClickEvent();
+	((PushButtonMulticlick *)s)->onDoubleClick();
 }
 
-// Handler wrapper function for a long press start :
-static void __handleLongPressStart(void *s)
+// Handler wrapper function for a multi click:
+static void __onPushButtonMulticlickMulticlicked(void *s)
 {
 	traceme;
-	((PushButtonMulticlick *)s)->longPressStartEvent();
+	((PushButtonMulticlick *)s)->onMultiClick();
+}
+
+// Handler wrapper function for a long press start:
+static void __onPushButtonMulticlickLongPressStarted(void *s)
+{
+	traceme;
+	((PushButtonMulticlick *)s)->onLongPressStart();
 }
 
 // Handler wrapper function for a long press stop:
-static void __handleLongPressStop(void *s)
+static void __onPushButtonMulticlickLongPressStopped(void *s)
 {
 	traceme;
-	((PushButtonMulticlick *)s)->longPressStopEvent();
+	((PushButtonMulticlick *)s)->onLongPressStop();
 }
 
 // Handler wrapper function for a during long press:
-static void __handleDuringLongPress(void *s)
+static void __onPushButtonMulticlickDuringLongPressed(void *s)
 {
 	traceme;
-	((PushButtonMulticlick *)s)->duringLongPressEvent();
+	((PushButtonMulticlick *)s)->onDuringLongPress();
 }
 
 #endif
