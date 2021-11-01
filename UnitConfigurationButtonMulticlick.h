@@ -1,5 +1,5 @@
-#ifndef UnitConfigurationButtonMulticlick_h
-#define UnitConfigurationButtonMulticlick_h
+#ifndef UCButtonMulticlick_h
+#define UCButtonMulticlick_h
 
 #include "PushButtonMulticlick.h"
 

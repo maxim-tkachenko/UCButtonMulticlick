@@ -13,11 +13,11 @@
 				"-o",
 				"${workspaceFolder}/main",
 				"-I/Users/mtkachenko/Projects/local/iot/libraries/UnitConfiguration",
-				"-I/Users/mtkachenko/Projects/local/iot/libraries/UnitConfigurationButtonMulticlick",
+				"-I/Users/mtkachenko/Projects/local/iot/libraries/UCButtonMulticlick",
 				"-I/Users/mtkachenko/Projects/local/iot/libraries/OneButton/src",
 				"${workspaceFolder}/*.cpp",
 				"/Users/mtkachenko/Projects/local/iot/libraries/UnitConfiguration/*.cpp",
-				"/Users/mtkachenko/Projects/local/iot/libraries/UnitConfigurationButtonMulticlick/*.cpp",
+				"/Users/mtkachenko/Projects/local/iot/libraries/UCButtonMulticlick/*.cpp",
 				"/Users/mtkachenko/Projects/local/iot/libraries/OneButton/src/*.cpp",
 			],
 			"options": {

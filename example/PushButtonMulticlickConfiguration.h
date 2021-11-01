@@ -2,7 +2,7 @@
 #define PushButtonMulticlickConfiguration_h
 
 #include <UnitConfiguration.h>
-#include <UnitConfigurationButtonMulticlick.h>
+#include <UCButtonMulticlick.h>
 #include "LedTurnConfig.h"
 #include "TestControllerHandler.h"
 
