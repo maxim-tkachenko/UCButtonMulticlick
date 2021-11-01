@@ -31,10 +31,10 @@ enum PushButtonMulticlickTriggerType : uint8_t
 {
 	Single = 1,
 	Double = 2,
-	Multi = 3,
-	LongPressStart = 4,
-	LongPressStop = 5,
-	DuringLongPress = 6,
+	Multi = 3, // value will represent number of clicks
+	LongPressStart = 253,
+	LongPressStop = 254,
+	DuringLongPress = 255,
 };
 
 // Handler wrapper function for a single click:

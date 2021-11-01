@@ -51,7 +51,7 @@ void PushButtonMulticlick::onDoubleClick()
 void PushButtonMulticlick::onMultiClick()
 {
     traceme;
-    _lastReadState = StateChangedResult(true, true, PushButtonMulticlickTriggerType::Multi);
+    _lastReadState = StateChangedResult(true, true, getNumberClicks());
 }
 
 void PushButtonMulticlick::onLongPressStart()
