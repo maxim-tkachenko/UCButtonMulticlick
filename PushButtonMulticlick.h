@@ -27,10 +27,15 @@ public:
 	void onDuringLongPress();
 };
 
-// enum
-// {
-// 	fff,
-// } PushButtonMulticlickResult;
+enum PushButtonMulticlickTriggerType : uint8_t
+{
+	Single = 1,
+	Double = 2,
+	Multi = 3,
+	LongPressStart = 4,
+	LongPressStop = 5,
+	DuringLongPress = 6,
+};
 
 // Handler wrapper function for a single click:
 static void __onPushButtonMulticlickClicked(void *s)

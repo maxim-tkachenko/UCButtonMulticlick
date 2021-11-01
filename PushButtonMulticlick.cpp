@@ -39,32 +39,35 @@ StateChangedResult PushButtonMulticlick::stateIsChanged()
 void PushButtonMulticlick::onClick()
 {
     traceme;
-    _lastReadState = StateChangedResult(true, true, 1);
+    _lastReadState = StateChangedResult(true, true, PushButtonMulticlickTriggerType::Single);
 }
 
 void PushButtonMulticlick::onDoubleClick()
 {
     traceme;
-    _lastReadState = StateChangedResult(true, true, 2);
+    _lastReadState = StateChangedResult(true, true, PushButtonMulticlickTriggerType::Double);
 }
 
 void PushButtonMulticlick::onMultiClick()
 {
     traceme;
+    _lastReadState = StateChangedResult(true, true, PushButtonMulticlickTriggerType::Multi);
 }
 
 void PushButtonMulticlick::onLongPressStart()
 {
     traceme;
+    _lastReadState = StateChangedResult(true, true, PushButtonMulticlickTriggerType::LongPressStart);
 }
 
 void PushButtonMulticlick::onLongPressStop()
 {
     traceme;
-    _lastReadState = StateChangedResult(true, true, 3);
+    _lastReadState = StateChangedResult(true, true, PushButtonMulticlickTriggerType::LongPressStop);
 }
 
 void PushButtonMulticlick::onDuringLongPress()
 {
     traceme;
+    _lastReadState = StateChangedResult(true, true, PushButtonMulticlickTriggerType::DuringLongPress);
 }
