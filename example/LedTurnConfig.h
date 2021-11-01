@@ -25,15 +25,15 @@ public:
         auto color = CRGB::Red;
         switch (requestorId)
         {
-        case 1:
+        case PushButtonMulticlickTriggerType::Single:
             color = CRGB::Green;
             break;
 
-        case 2:
+        case PushButtonMulticlickTriggerType::Double:
             color = CRGB::White;
             break;
 
-        case 3:
+        case PushButtonMulticlickTriggerType::LongPressStop:
             color = CRGB::Blue;
             break;
         }
