@@ -56,13 +56,11 @@ private:
 
 	static void _setLastReadState(void *sender, uint8_t stateCode)
 	{
-		((PushButtonMulticlick *)sender)->setLastReadState(stateCode);
+		((PushButtonMulticlick *)sender)->lastReadState = StateChangedResult(true, true, stateCode);
 	}
 
 protected:
-	StateChangedResult _lastReadState;
-	void setLastReadState(uint8_t stateCode);
-
+	StateChangedResult lastReadState;
 	virtual void init() override;
 
 public:
