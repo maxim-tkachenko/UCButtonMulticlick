@@ -19,7 +19,8 @@
             "cppStandard": "c++17",
             "defines": [
                 "USBCON"
-            ]
+            ],
+            "compileCommands": "/Users/mtkachenko/Projects/local/iot/libraries/UnitConfiguration/build/compile_commands.json"
         },
         {
             "name": "Arduino",
