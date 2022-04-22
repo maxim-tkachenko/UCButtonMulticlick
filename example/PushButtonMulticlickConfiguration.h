@@ -14,9 +14,9 @@ public:
         auto button = new PushButtonMulticlick(2, BUTTON_ID);
         button->setClickTicks(250);
         button->setPressTicks(500);
-        button->attachClick(__onPushButtonMulticlickClicked, button);
-        button->attachDoubleClick(__onPushButtonMulticlickDoubleClicked, button);
-        button->attachLongPressStop(__onPushButtonMulticlickLongPressStopped, button);
+        button->attachClick();
+        button->attachDoubleClick();
+        button->attachLongPressStop();
 
         add(new WorkUnit(
             new IDevice *[2]

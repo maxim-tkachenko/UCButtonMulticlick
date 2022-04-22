@@ -4,7 +4,7 @@ PushButtonMulticlick::PushButtonMulticlick(
     uint8_t pin,
     uint8_t id)
     : Button(pin, id),
-      OneButton(pin, true),
+      OneButton(pin, true), // connects to digital pin and GND, which is active low and uses the internal pull-up resistor.
       _lastReadState(false, false)
 {
     traceme;
@@ -13,6 +13,11 @@ PushButtonMulticlick::PushButtonMulticlick(
 PushButtonMulticlick::~PushButtonMulticlick()
 {
     traceme;
+}
+
+void PushButtonMulticlick::setLastReadState(uint8_t stateCode)
+{
+    _lastReadState = StateChangedResult(true, true, stateCode);
 }
 
 void PushButtonMulticlick::init()
@@ -35,39 +40,38 @@ StateChangedResult PushButtonMulticlick::stateIsChanged()
     return s;
 }
 
-// event handlers
-void PushButtonMulticlick::onClick()
+void PushButtonMulticlick::attachClick()
 {
     traceme;
-    _lastReadState = StateChangedResult(true, true, PushButtonMulticlickTriggerType::Single);
+    OneButton::attachClick(onClick, this);
 }
 
-void PushButtonMulticlick::onDoubleClick()
+void PushButtonMulticlick::attachDoubleClick()
 {
     traceme;
-    _lastReadState = StateChangedResult(true, true, PushButtonMulticlickTriggerType::Double);
+    OneButton::attachDoubleClick(onDoubleClick, this);
 }
 
-void PushButtonMulticlick::onMultiClick()
+void PushButtonMulticlick::attachMultiClick()
 {
     traceme;
-    _lastReadState = StateChangedResult(true, true, getNumberClicks());
+    OneButton::attachMultiClick(onMultiClick, this);
 }
 
-void PushButtonMulticlick::onLongPressStart()
+void PushButtonMulticlick::attachLongPressStart()
 {
     traceme;
-    _lastReadState = StateChangedResult(true, true, PushButtonMulticlickTriggerType::LongPressStart);
+    OneButton::attachLongPressStart(onLongPressStart, this);
 }
 
-void PushButtonMulticlick::onLongPressStop()
+void PushButtonMulticlick::attachLongPressStop()
 {
     traceme;
-    _lastReadState = StateChangedResult(true, true, PushButtonMulticlickTriggerType::LongPressStop);
+    OneButton::attachLongPressStop(onLongPressStop, this);
 }
 
-void PushButtonMulticlick::onDuringLongPress()
+void PushButtonMulticlick::attachDuringLongPress()
 {
     traceme;
-    _lastReadState = StateChangedResult(true, true, PushButtonMulticlickTriggerType::DuringLongPress);
+    OneButton::attachDuringLongPress(onDuringLongPress, this);
 }
